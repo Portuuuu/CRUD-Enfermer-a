@@ -1,0 +1,59 @@
+﻿@model Enfermeria.Models.EnfPersona
+
+@{
+    ViewData["Title"] = "Desactivar Persona";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">@ViewData["Title"]</h2>
+
+    <h4>¿Está seguro que desea desactivar esta persona?</h4>
+    <hr />
+
+    <div class="card">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Cedula)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Cedula)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Departamento)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Departamento)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Tipo)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Seccion)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Seccion)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <form asp-action="Delete" class="mt-3">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">
+            <i class="bi bi-x-circle"></i> Desactivar
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Cancelar
+        </a>
+    </form>
+</div>

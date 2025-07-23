@@ -1,0 +1,102 @@
+﻿@model Enfermeria.Models.EnfPersona
+
+@{
+    ViewData["Title"] = "Detalles de Persona";
+}
+
+<div class="container mt-4">
+    <div class="card shadow rounded">
+        <div class="card-header bg-info text-white">
+            <h3 class="mb-0">Detalles de la Persona</h3>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Cedula)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Cedula)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Telefono)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Usuario)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Usuario)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Password)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Password)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Departamento)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Departamento)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Tipo)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Seccion)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Seccion)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.FechaNacimiento)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.FechaNacimiento)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Sexo)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Sexo)
+                </dd>
+            </dl>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Volver al Listado
+            </a>
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">
+                <i class="bi bi-pencil-square"></i> Editar
+            </a>
+        </div>
+    </div>
+</div>
+
